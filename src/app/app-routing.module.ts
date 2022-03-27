@@ -24,6 +24,7 @@ const routes: Routes = [
       {
         path: 'indicadores/agregarDatos/:id',
         component: EditarComponent,
+        canActivate:[AuthGuard],
       },
       {
         path: 'admin',
