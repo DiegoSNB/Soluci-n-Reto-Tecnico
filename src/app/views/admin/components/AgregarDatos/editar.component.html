@@ -1,0 +1,90 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<div class="animate__animated animate__fadeIn">
+
+
+
+
+  <div class="ventana">
+
+    <h1 style="text-align:center; margin-top: 5vh">Agregar Datos</h1>
+
+    <div class="container" style="padding-top: 2px; width: 50%;">
+
+      <form class="border p-3 form" [formGroup]="editarForm" style="justify-content: center;
+  align-items: center;" (ngSubmit)="postForms(editarForm.value)">
+   <div hidden class="form-floating mb-3 form-group">
+    <input hidden type="text" class="form-control"   formControlName="ID"
+      maxlength="20" style="height: 12vh;">
+    <label >DESCRIPCION</label>
+  </div>
+
+
+        <div class="form-floating mb-3 form-group">
+          <input type="text" class="form-control"   formControlName="Nombre"
+            maxlength="20" style="height: 12vh;">
+          <label >DESCRIPCION</label>
+        </div>
+
+        <div class="form-floating mb-3 form-group">
+          <input type="text" class="form-control"  formControlName="Cantidad"
+            maxlength="20">
+          <label>Dato</label>
+        </div>
+
+        <div class="form-floating mb-3 form-group">
+          <input type="text" class="form-control"  formControlName="dato1"
+            maxlength="20">
+          <label >Dato</label>
+        </div>
+
+        <div class="form-floating mb-3 form-group">
+          <input type="text" class="form-control"  formControlName="dato2"
+            maxlength="18">
+          <label >Dato</label>
+        </div>
+
+        <div class="form-floating mb-3 form-group">
+          <input type="text" class="form-control"   formControlName="dato3"
+            maxlength="18">
+          <label >Dato</label>
+        </div>
+
+        <div class="form-floating mb-3 form-group">
+          <input type="text" class="form-control"   formControlName="dato4"
+            maxlength="18">
+          <label >Dato</label>
+        </div>
+
+
+
+        <div class="container">
+          <div class="row">
+
+            <div class="force-to-bottom text-center" style="margin-top: 1vh;">
+              <div class="row">
+                <div class="col-lg"><button type="submit" class="btn btn-info"><label>Agregar</label></button>
+                </div>
+                <div class="col-lg"><button [routerLink]="['/admin']" class="btn btn-danger"><label>Cancelar</label></button></div>
+                <div class="w-100"></div>
+
+                <!-- <span>&nbsp;</span> -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+
+<!-- <div class="modal-footer">
+  <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+  <button type="button" class="btn btn-primary">REGISTRAR</button>
+</div> -->

@@ -1,0 +1,56 @@
+
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<div class="animate__animated animate__fadeIn">
+
+
+
+<div class="ventana">
+
+  <h2 style="text-align:center; margin-top: 2vh">Nuevo Indicador</h2>
+
+  <div class="container" style="padding-top: 2px; width: 50%;margin-bottom: 2vh;">
+    <form class="border p-3 form" [formGroup]="nuevoForm" style="justify-content: center;
+  align-items: center;" (ngSubmit)="postForm(nuevoForm.value)">
+
+
+      <div class="form-floating mb-3 form-group">
+        <input type="text" class="form-control"   formControlName="Nombre" style="height: 12vh;" maxlength="65">
+        <label for="DES_NOMBRE">DESCRIPCION</label>
+      </div>
+
+      <div class="form-floating mb-3 form-group">
+        <input type="text" class="form-control"  formControlName="Cantidad" maxlength="10" >
+        <label>Cantidad</label>
+      </div>
+
+            <div class="container">
+              <div class="row">
+
+                <div class="force-to-bottom text-center" style="margin-top: 1vh;">
+
+                  <div class="row">
+                    <div class="col-lg"><button type="submit" class="btn btn-info">Registrar</button>
+                    </div>
+
+                    <div class="col-lg"><button  [routerLink]="['/admin']"
+                        class="btn btn-danger"><label>Cancelar</label></button></div>
+                    <div class="w-100"></div>
+
+                    <!-- <span>&nbsp;</span> -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </form>
+          </div>
+
+        </div>
+</div>

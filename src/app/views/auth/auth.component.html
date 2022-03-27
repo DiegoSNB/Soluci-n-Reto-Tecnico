@@ -1,0 +1,52 @@
+<section class="h-100">
+  <div class="container h-100">
+    <div class="row justify-content-sm-center h-100">
+      <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+        <div class="text-center my-5">
+          <img src="assets/img/logo2.png" alt="logo" width="80%">
+        </div>
+        <div class="card shadow-lg">
+          <div class="alert alert-danger" role="alert" *ngIf="errorStatus">
+            <p>{{errorMsj}}</p>
+          </div>
+          <div class="card-body p-5">
+            <h1 class="fs-4 card-title fw-bold mb-4 text-center">Inicio de Sesión <span class="text-info"></span></h1>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+              <div class="mb-3">
+                <label class="mb-2 text-muted" for="email">CORREO</label>
+                <input id="correo" type="text" class="form-control" formControlName="correo">
+                <div class="invalid-feedback">
+                  Usuario Incorrecto
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="mb-2 w-100">
+                  <label class="text-muted" for="contrasena">CONTRASEÑA</label>
+                </div>
+                <input id="contrasena" type="password" class="form-control" name="contrasena" formControlName="contrasena">
+                  <div class="invalid-feedback">
+                    Password is required
+                  </div>
+              </div>
+              <div class="d-flex align-items-center">
+              <br>
+
+              <button type="submit" class="btn btn-info ms-auto w-100 btn-lg" *ngIf="iniciandoSesion === false">
+                Aceptar
+              </button>
+
+              <!--Comienza Spinner Loading-->
+              <div *ngIf="iniciandoSesion === true" class="spinner"></div>
+              <!--Termina Spinner Loading-->
+
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="text-center mt-5 text-muted">
+           &copy;  &mdash; Innpactia
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
